@@ -1,10 +1,12 @@
 <body>
-    <div class = "nav">
-        <ul>
-            <li><a href = "home"> Home </a></li>
-            <li><a href = "#about-me"> About </a></li>
-            <li><a href = "#contact-me"> Contact </a></li>
-        </ul>
+    <div class = "wrapper">
+        <div class = "nav">
+            <ul>
+                <li><a href = "home"> Home </a></li>
+                <li><a href = "#about-me"> About </a></li>
+                <li><a href = "#contact-me"> Contact </a></li>
+            </ul>
+        </div>
     </div>
     
 
@@ -13,7 +15,7 @@
     </div>
 
     <div class = "resume">
-            Download Resume
+        <a class = "download" href = "./Resume.pdf" download = "Resume.pdf"> Download Resume</a>
     </div>
 
     <div class = "about">
@@ -32,11 +34,16 @@
             <li><a href = "https://www.linkedin.com/in/steven-liu-4068b326a/">LinkedIn</a></li> 
         </div>
     </div>
+
+    <footer>
+        <p1>Copy Right 2024</p1>
+    </footer>
 </body>
 
 
 <style>
     ul {
+        overflow: hidden;
         list-style-type: none; /*not make the buttons into a list*/
         padding: 0;
         margin: 0;
@@ -45,13 +52,10 @@
     }
 
     .nav { 
-        overflow: hidden;
-        position: fixed; /*set to the top*/
+        position: flex; /*properly set the nav bar at the top*/
         background-color: black;
         width: 100%;
-        left: 0; /*this pushes the bar to the left to fully fill the screen*/
-        top: 0; /*set to the very top*/
-        padding: 30px; /*helps with adjusting the height so it's not too far up*/
+        height: 3rem;
     }
 
     .nav a{
@@ -65,6 +69,23 @@
         border-radius: 50px;
     }
 
+    .resume{
+        display: flex;
+        margin-left: 10%;
+    }
+
+    .resume a{
+        text-decoration: none;
+        color: green;
+        
+    }
+
+    .resume a:hover{
+         color: pink;
+         border-radius: 50px;
+         background-color: red;
+    }
+
     .content {
         padding: 100px;
         text-align: center;
@@ -76,6 +97,7 @@
         text-align: center;
         font-weight: bold; 
         text-transform: uppercase;
+        padding-top: 500px;/*testing out spaces for the page*/
     }
 
     .contact{
@@ -83,6 +105,26 @@
         font-weight: bold; 
         text-transform: uppercase;
         list-style: none;
+        text-decoration: none;
+        padding-bottom: 10rem;
+        padding-top: 500px;/*testing out spaces for the page*/
+    }
+
+    footer {
+        background-color: black;
+        color: white;
+        width: 100%;
+        position: flex; /*proper way to position the footer at the very bottom*/
+        height: 2.5rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    /*this part of the code targets div, p, h1, ul, li, etc.*/
+    * {
+        margin:0; /*this helped properly fix the footer spacing */
+        box-sizing: border-box;
+        padding: 0;
         text-decoration: none;
     }
 
