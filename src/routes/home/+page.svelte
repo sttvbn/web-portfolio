@@ -2,8 +2,12 @@
     <div class = "wrapper">
         <div class = "nav">
             <ul>
+                <div class = "left-logo">
+                    <h1><a href = "#about-me" > Steven Liu </a></h1>
+                </div>
                 <li><a href = "home"> Home </a></li>
                 <li><a href = "#about-me"> About </a></li>
+                <li><a href = "#myprojects"> Projects </a></li>
                 <li><a href = "#contact-me"> Contact </a></li>
             </ul>
         </div>
@@ -14,22 +18,37 @@
         <h1> Hello there, My name is Steven! Welcome to my Portfolio!  </h1>
     </div>
 
+    <div class = "image">
+        <img src = "src/routes/images/self.jpg" alt="self" class = "self-image">
+    </div>
+
     <div class = "resume">
-        <a class = "download" href = "./Resume.pdf" download = "Resume.pdf"> Download Resume</a>
+        <a class = "download" href = "src/routes/resume/Resume.pdf" download = "Resume.pdf"> Download Resume</a>
     </div>
 
     <div class = "about">
+        <h1> About Me </h1>
         <div id = "about-me">
-            <h1> About Me </h1>
+            <div class = "about-container">
+                <div class = "aboutme">
+                    <h2> Steven Liu </h2>
+                    <p1>Graduated at CSUF (California State University of Fullerton) with a bachelor degree of Computer Science. </p1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "projects">
+        <div id = "myprojects">
+            <h1> Projects </h1>
+            <p1> All projects are stored in Github.</p1> <a href = "https://github.com/sttvbn">Github</a>
         </div>
     </div>
 
     <div class = "contact">
         <div id = "contact-me">
             <h1> Contact </h1>
-
-            <li> Email: stevenlaoliu@gmail.com</li>
-            <li> Phone: 626-404-3359</li>
+            <p1>Email: stevenlaoliu@gmail.com</p1>
             <li><a href = "https://github.com/sttvbn">Github</a></li> 
             <li><a href = "https://www.linkedin.com/in/steven-liu-4068b326a/">LinkedIn</a></li> 
         </div>
@@ -51,17 +70,43 @@
         justify-content: flex-end; /*this will align buttons/items to the right side*/
     }
 
+    body{
+        background-color: rgb(68, 68, 68);
+    }
+
+    .image{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 10%;
+    }
+
+    .self-image{
+        width: 500px;
+        height: auto;
+    }
+
     .nav { 
         position: flex; /*properly set the nav bar at the top*/
-        background-color: black;
+        background-color: transparent;
         width: 100%;
-        height: 3rem;
+    }
+
+    .left-logo{
+        margin-right: auto; /*adjust the logo to the left side of the nav bar*/
+    }
+
+    .left-logo a{
+        text-transform: uppercase;
+        font-weight: bold;
     }
 
     .nav a{
-        color: white;
+        color: black;
         text-decoration: none;
-        padding: 40px; /*this helps with spacing the buttons*/
+        padding: 20px; /*this helps with spacing the buttons*/
+        align-items: center;
+        display: flex;
+        float: right;
     }
 
     .nav a:hover{
@@ -72,25 +117,38 @@
     .resume{
         display: flex;
         margin-left: 10%;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .resume .download{
+        background-color: rgb(212, 210, 210);
+        border-radius: 50px;
+        height: 50px;
     }
 
     .resume a{
         text-decoration: none;
-        color: green;
-        
+        color: blue;
+        align-items: center;
+        display: flex; /*center the text in the middle*/
+
     }
 
     .resume a:hover{
-         color: pink;
-         border-radius: 50px;
-         background-color: red;
+        color: pink;
+        border-radius: 50px;
+        background-color: red;
+        height: 50px;
+        color: black;
     }
 
     .content {
-        padding: 100px;
-        text-align: center;
+        padding-top: 100px;
         font-weight: bold;
         text-transform: uppercase;
+        text-align: center;
+        width: 50%;
     }
 
     .about{
@@ -98,6 +156,17 @@
         font-weight: bold; 
         text-transform: uppercase;
         padding-top: 500px;/*testing out spaces for the page*/
+    }
+
+    .aboutme{
+        background-color: rgb(158, 154, 154);
+        width: 30%;   
+        padding: 2rem; /*add padding around the content (this made the text stay in the middle and it looks nice)*/
+        border-radius: 25px;
+    }
+
+    .about-container{
+        padding-left: 5rem;
     }
 
     .contact{
@@ -110,14 +179,36 @@
         padding-top: 500px;/*testing out spaces for the page*/
     }
 
+    .contact li{
+        padding-top: 20px;
+    }
+
+    .contact a{
+        background-color: yellow;
+        border-radius: 50px;
+    }
+
+    .contact a:hover{
+        color: grey;
+        background-color: green;
+        border-radius: 50px;
+    }
+
     footer {
-        background-color: black;
+        background-color: transparent;
         color: white;
         width: 100%;
         position: flex; /*proper way to position the footer at the very bottom*/
         height: 2.5rem;
         text-align: center;
         margin: 0;
+    }
+
+    .projects {
+        text-align: center; 
+        font-weight: bold; 
+        text-transform: uppercase;
+        padding-top: 20%;
     }
 
     /*this part of the code targets div, p, h1, ul, li, etc.*/
