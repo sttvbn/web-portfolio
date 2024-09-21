@@ -74,8 +74,9 @@
         justify-content: flex-end; /*this will align buttons/items to the right side*/
     }
 
-    body{
-        background-color: rgb(167, 160, 160);
+    /*using the global function to fix background color*/
+    :global(body){
+        background-color: rgb(155, 155, 167);
     }
 
     .image{
@@ -179,6 +180,8 @@
         width: 500px;
         height: auto;
         border-radius: 50%;
+        margin-top: 2%;
+        margin-bottom: 2%;
     }
 
     .contact{
@@ -208,12 +211,13 @@
 
     footer {
         background-color: transparent;
-        color: white;
+        color: black;
         width: 100%;
         position: flex; /*proper way to position the footer at the very bottom*/
         height: 2.5rem;
         text-align: center;
         margin: 0;
+        font-weight: bold;
     }
 
     .projects {
