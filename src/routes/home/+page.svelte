@@ -15,7 +15,9 @@
     
 
     <div class = "content">
-        <h1> Hello there, My name is Steven! Welcome to my Portfolio!  </h1>
+        <h1> Welcome to my Portfolio!  </h1>
+        <h2> Steven Liu </h2>
+        <p1> |Software Engineer| |Web Developer|</p1>
     </div>
 
     <div class = "image">
@@ -28,15 +30,17 @@
 
     <div class = "about">
         <h1> About Me </h1>
+        <img src = "src/routes/images/IMG_5644.jpg" alt = "self" class = "about-pic">
         <div id = "about-me">
             <div class = "about-container">
                 <div class = "aboutme">
-                    <h2> Steven Liu </h2>
-                    <p1>Graduated at CSUF (California State University of Fullerton) with a bachelor degree of Computer Science. </p1>
+                    <h2> Hi there, I'm Steven Liu! </h2>
+                    <p1>I'm a recent graduate from California State Univeristy of Fullerton (CSUF) with a bachelor's degree in Computer Science, and I'm focused on becoming a Software Engineer and Web developer, with a passion for working on both frontend and backend development.</p1>
                 </div>
             </div>
         </div>
     </div>
+
 
     <div class = "projects">
         <div id = "myprojects">
@@ -71,7 +75,7 @@
     }
 
     body{
-        background-color: rgb(68, 68, 68);
+        background-color: rgb(167, 160, 160);
     }
 
     .image{
@@ -83,6 +87,7 @@
     .self-image{
         width: 500px;
         height: auto;
+        border-radius: 50px;
     }
 
     .nav { 
@@ -122,7 +127,7 @@
     }
 
     .resume .download{
-        background-color: rgb(212, 210, 210);
+        background-color: white;
         border-radius: 50px;
         height: 50px;
     }
@@ -136,7 +141,6 @@
     }
 
     .resume a:hover{
-        color: pink;
         border-radius: 50px;
         background-color: red;
         height: 50px;
@@ -154,7 +158,6 @@
     .about{
         text-align: center;
         font-weight: bold; 
-        text-transform: uppercase;
         padding-top: 500px;/*testing out spaces for the page*/
     }
 
@@ -163,10 +166,19 @@
         width: 30%;   
         padding: 2rem; /*add padding around the content (this made the text stay in the middle and it looks nice)*/
         border-radius: 25px;
+        text-align: center;
+        line-height: 1.6;
     }
 
     .about-container{
-        padding-left: 5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-pic{
+        width: 500px;
+        height: auto;
+        border-radius: 50%;
     }
 
     .contact{
