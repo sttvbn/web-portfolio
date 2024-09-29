@@ -50,11 +50,13 @@
     </div>
 
     <div class = "contact">
-        <div id = "contact-me">
-            <h1> Contact </h1>
+        <h1> Contact </h1>
+        <div class = "contact-me">
             <p1>Email: stevenlaoliu@gmail.com</p1>
-            <li><a href = "https://github.com/sttvbn">Github</a></li> 
-            <li><a href = "https://www.linkedin.com/in/steven-liu-4068b326a/">LinkedIn</a></li> 
+        </div>
+        <div class = "links">
+            <a href = "https://github.com/sttvbn"><img src = "src/routes/images/github-black.png" alt = "git"></a>
+            <a href = "https://www.linkedin.com/in/steven-liu-4068b326a/"><img src = "src/routes/images/linkedin.png" alt = "linked"></a>
         </div>
     </div>
 
@@ -188,25 +190,27 @@
         text-align: center;
         font-weight: bold; 
         text-transform: uppercase;
-        list-style: none;
-        text-decoration: none;
         padding-bottom: 10rem;
         padding-top: 500px;/*testing out spaces for the page*/
     }
 
-    .contact li{
-        padding-top: 20px;
+    .contact-me{
+        margin-bottom: 50px;
+        margin-top: 50px;
     }
 
-    .contact a{
-        background-color: yellow;
-        border-radius: 50px;
+    .links{
+        margin-bottom: 50px;
+        margin-top: 50px;
+        display: flex;
+        gap: 50px;
+        justify-content: center;
     }
 
-    .contact a:hover{
-        color: grey;
-        background-color: green;
-        border-radius: 50px;
+    .contact img{
+        width: 100px;
+        height: auto;
+        color: none;
     }
 
     footer {
