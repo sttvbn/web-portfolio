@@ -18,14 +18,13 @@
         <h1> Welcome to my Portfolio!  </h1>
         <h2> Steven Liu </h2>
         <p1> |Software Engineer| |Web Developer|</p1>
+        <div class = "resume">
+            <a class = "download" href = "src/routes/resume/Resume.pdf" download = "Resume.pdf"> Download Resume</a>
+        </div>
     </div>
 
     <div class = "image">
         <img src = "src/routes/images/self.jpg" alt="self" class = "self-image">
-    </div>
-
-    <div class = "resume">
-        <a class = "download" href = "src/routes/resume/Resume.pdf" download = "Resume.pdf"> Download Resume</a>
     </div>
 
     <div class = "about">
@@ -84,7 +83,7 @@
     .image{
         display: flex;
         justify-content: flex-end;
-        padding-right: 10%;
+        padding-right: 20%;
     }
 
     .self-image{
@@ -124,9 +123,12 @@
 
     .resume{
         display: flex;
-        margin-left: 10%;
+        margin-left: 45%;
+        padding-top: 20px;
         text-transform: uppercase;
         font-weight: bold;
+        align-items: center;
+    
     }
 
     .resume .download{
@@ -151,11 +153,11 @@
     }
 
     .content {
-        padding-top: 100px;
+        padding-top: 5%;
+        padding-right: 20%;
         font-weight: bold;
         text-transform: uppercase;
         text-align: center;
-        width: 50%;
     }
 
     .about{
