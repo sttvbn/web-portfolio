@@ -12,27 +12,29 @@
             </ul>
         </div>
     </div>
-    
 
     <div class = "content">
-        <h1> Welcome to my Portfolio!  </h1>
-        <h2> Steven Liu </h2>
-        <p1> |Software Engineer| |Web Developer|</p1>
-        <div class = "resume">
-            <a class = "download" href = "src/routes/resume/Resume.pdf" download = "Resume.pdf"> Download Resume</a>
+        <div id = "home-content">
+            <div class = "main-content">
+                <h1> Welcome to my Portfolio!  </h1>
+                <h2> Steven Liu </h2>
+                <p1> |Software Engineer| |Web Developer|</p1>
+            </div>
+            <div class = "resume">
+                <a class = "download" href = "src/routes/resume/Resume.pdf" download = "Resume.pdf"> Download Resume</a>
+            </div>
+            <div class = "image">
+                <img src = "src/routes/images/self.jpg" alt="self" class = "self-image">
+            </div>
         </div>
     </div>
 
-    <div class = "image">
-        <img src = "src/routes/images/self.jpg" alt="self" class = "self-image">
-    </div>
-
     <div class = "about">
-        <h1> About Me </h1>
-        <img src = "src/routes/images/IMG_5644.jpg" alt = "self" class = "about-pic">
         <div id = "about-me">
+            <h1> About Me </h1>
             <div class = "about-container">
                 <div class = "aboutme">
+                    <img src = "src/routes/images/IMG_5644.jpg" alt = "self" class = "about-pic">
                     <h2> Hi there, I'm Steven Liu! </h2>
                     <p1>I'm a recent graduate from California State Univeristy of Fullerton (CSUF) with a bachelor's degree in Computer Science, and I'm focused on becoming a Software Engineer and Web developer, with a passion for working on both frontend and backend development.</p1>
                 </div>
@@ -49,13 +51,14 @@
     </div>
 
     <div class = "contact">
-        <h1> Contact </h1>
-        <div class = "contact-me">
+        <div id = "contact-me">
+            <h1> Contact </h1>
             <p1>Email: stevenlaoliu@gmail.com</p1>
         </div>
         <div class = "links">
             <a href = "https://github.com/sttvbn"><img src = "src/routes/images/github-black.png" alt = "git"></a>
             <a href = "https://www.linkedin.com/in/steven-liu-4068b326a/"><img src = "src/routes/images/linkedin.png" alt = "linked"></a>
+            <a href = "https://www.instagram.com/stv.nliu/profilecard/?igsh=MzRlODBiNWFlZA%3D%3D"><img src = "src/routes/images/insta.png" alt = "insta"></a>
         </div>
     </div>
 
@@ -73,6 +76,8 @@
         margin: 0;
         display: flex; /*put into rows instead of a list*/
         justify-content: flex-end; /*this will align buttons/items to the right side*/
+        text-transform: uppercase;
+        font-weight: bold;
     }
 
     /*using the global function to fix background color*/
@@ -81,9 +86,21 @@
     }
 
     .image{
-        display: flex;
         justify-content: flex-end;
+    }
+
+    .main-content{
+        justify-content: flex-end;
+    }
+
+    .content {
+        padding-top: 5%;
         padding-right: 20%;
+        font-weight: bold;
+        text-transform: uppercase;
+        /* background-color: pink; */
+        width: 70%;
+        align-items: center;
     }
 
     .self-image{
@@ -128,42 +145,38 @@
         text-transform: uppercase;
         font-weight: bold;
         align-items: center;
-    
     }
 
     .resume .download{
-        background-color: white;
-        border-radius: 50px;
+        background-color: rgb(155, 155, 167);
+        border-radius: 20px;
+        border: solid transparent;
         height: 50px;
+        letter-spacing: .9px;
+        padding: 13px 16px;
+        border-color: rgb(226, 226, 226);
     }
 
     .resume a{
         text-decoration: none;
-        color: blue;
+        color: black;
         align-items: center;
         display: flex; /*center the text in the middle*/
 
     }
 
     .resume a:hover{
-        border-radius: 50px;
-        background-color: red;
+        border-radius: 20px;
+        background-color: grey;
         height: 50px;
-        color: black;
-    }
-
-    .content {
-        padding-top: 5%;
-        padding-right: 20%;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-align: center;
+        box-shadow: 0 0 15px 5px rgb(226, 226, 226);
+        transform: scale(1.05);
     }
 
     .about{
         text-align: center;
         font-weight: bold; 
-        padding-top: 500px;/*testing out spaces for the page*/
+        padding-top: 20%;/*testing out spaces for the page*/
     }
 
     .aboutme{
@@ -193,12 +206,7 @@
         font-weight: bold; 
         text-transform: uppercase;
         padding-bottom: 10rem;
-        padding-top: 500px;/*testing out spaces for the page*/
-    }
-
-    .contact-me{
-        margin-bottom: 50px;
-        margin-top: 50px;
+        padding-top: 20%;/*testing out spaces for the page*/
     }
 
     .links{
@@ -207,6 +215,10 @@
         display: flex;
         gap: 50px;
         justify-content: center;
+    }
+
+    .links a{
+        text-decoration: none;
     }
 
     .contact img{
