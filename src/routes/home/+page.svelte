@@ -17,11 +17,11 @@
         <div id = "home-content">
             <div class = "main-content">
                 <h1> Welcome to my Portfolio!  </h1>
-                <h2> Steven Liu </h2>
+                <h1> Steven Liu </h1>
                 <p1> |Software Engineer| |Web Developer|</p1>
-            </div>
-            <div class = "resume">
-                <a class = "download" href = "src/routes/resume/Resume.pdf" download = "Resume.pdf"> Download Resume</a>
+                <div class = "resume">
+                    <a class = "download" href = "src/routes/resume/Resume.pdf" download = "Resume.pdf"> Download Resume</a>
+                </div>
             </div>
             <div class = "image">
                 <img src = "src/routes/images/self.jpg" alt="self" class = "self-image">
@@ -46,7 +46,7 @@
     <div class = "projects">
         <div id = "myprojects">
             <h1> Projects </h1>
-            <p1> All projects are stored in Github.</p1> <a href = "https://github.com/sttvbn">Github</a>
+            <p1> All projects are stored in Github. </p1> <a href = "https://github.com/sttvbn"> Click here</a>
         </div>
     </div>
 
@@ -58,7 +58,7 @@
         <div class = "links">
             <a href = "https://github.com/sttvbn"><img src = "src/routes/images/github-black.png" alt = "git"></a>
             <a href = "https://www.linkedin.com/in/steven-liu-4068b326a/"><img src = "src/routes/images/linkedin.png" alt = "linked"></a>
-            <a href = "https://www.instagram.com/stv.nliu/profilecard/?igsh=MzRlODBiNWFlZA%3D%3D"><img src = "src/routes/images/insta.png" alt = "insta"></a>
+            <a href = "https://www.instagram.com/stv.nliu/profilecard/?igsh=MzRlODBiNWFlZA%3D%3D"><img src = "src/routes/images/instagram.png" alt = "insta"></a>
         </div>
     </div>
 
@@ -82,31 +82,35 @@
 
     /*using the global function to fix background color*/
     :global(body){
-        background-color: rgb(155, 155, 167);
-    }
-
-    .image{
-        justify-content: flex-end;
+        /* background-color: rgb(155, 155, 167); */
+        background-color: rgb(26, 25, 25);
     }
 
     .main-content{
-        justify-content: flex-end;
+        position: absolute;
+        /* margin-top: 80px; */
+        bottom: 50%;
+        left: 30%;
     }
 
     .content {
-        padding-top: 5%;
-        padding-right: 20%;
         font-weight: bold;
         text-transform: uppercase;
-        /* background-color: pink; */
-        width: 70%;
-        align-items: center;
+        background-color: rgb(78, 72, 72);
+        border-radius: 50px;
+        width: 50%;
+        margin: auto;
+        height: 800px;
+        margin-top: 50px;
     }
 
     .self-image{
-        width: 500px;
-        height: auto;
+        position: absolute;
+        width: auto;
+        height: 500px;
         border-radius: 50px;
+        right: 30%;
+        bottom: 30%;
     }
 
     .nav { 
@@ -125,7 +129,7 @@
     }
 
     .nav a{
-        color: black;
+        color: white;
         text-decoration: none;
         padding: 20px; /*this helps with spacing the buttons*/
         align-items: center;
@@ -140,7 +144,6 @@
 
     .resume{
         display: flex;
-        margin-left: 45%;
         padding-top: 20px;
         text-transform: uppercase;
         font-weight: bold;
@@ -177,6 +180,7 @@
         text-align: center;
         font-weight: bold; 
         padding-top: 20%;/*testing out spaces for the page*/
+        color: white;
     }
 
     .aboutme{
@@ -186,6 +190,7 @@
         border-radius: 25px;
         text-align: center;
         line-height: 1.6;
+        color: black;
     }
 
     .about-container{
@@ -207,6 +212,7 @@
         text-transform: uppercase;
         padding-bottom: 10rem;
         padding-top: 20%;/*testing out spaces for the page*/
+        color: white
     }
 
     .links{
@@ -217,8 +223,12 @@
         justify-content: center;
     }
 
-    .links a{
-        text-decoration: none;
+    .links a:hover{
+        border-radius: 20px;
+        background-color:grey;
+        height: 100px;
+        box-shadow: 0 0 15px 5px rgb(226, 226, 226);
+        transform: scale(1.05);
     }
 
     .contact img{
@@ -229,7 +239,7 @@
 
     footer {
         background-color: transparent;
-        color: black;
+        color: white;
         width: 100%;
         position: flex; /*proper way to position the footer at the very bottom*/
         height: 2.5rem;
@@ -243,6 +253,15 @@
         font-weight: bold; 
         text-transform: uppercase;
         padding-top: 20%;
+        color: white
+    }
+    .projects a{
+        color: purple;
+        text-shadow: 0 0 5px rgb(198, 199, 202);
+    }
+
+    .projects a:hover{
+        text-shadow: 0 0 15px rgb(198, 199, 202);
     }
 
     /*this part of the code targets div, p, h1, ul, li, etc.*/
