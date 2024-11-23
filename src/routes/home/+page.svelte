@@ -48,6 +48,13 @@
             <h1> Projects </h1>
             <p1> All projects are stored in Github. </p1> <a href = "https://github.com/sttvbn"> Click here</a>
         </div>
+
+        <div class = display-wrapper>
+            <div class = "display">
+                <h1>SymptoQuest</h1>
+                <a href = "https://sympto-quest-phi.vercel.app/"> Click Here</a>
+            </div>
+        </div>
     </div>
 
     <div class = "contact">
@@ -111,6 +118,10 @@
         border-radius: 50px;
         right: 30%;
         bottom: 30%;
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
     }
 
     .nav { 
@@ -237,31 +248,44 @@
         color: none;
     }
 
-    footer {
-        background-color: transparent;
-        color: white;
-        width: 100%;
-        position: flex; /*proper way to position the footer at the very bottom*/
-        height: 2.5rem;
-        text-align: center;
-        margin: 0;
-        font-weight: bold;
-    }
-
     .projects {
         text-align: center; 
         font-weight: bold; 
         text-transform: uppercase;
         padding-top: 20%;
-        color: white
+        color: white;
     }
+
     .projects a{
-        color: purple;
-        text-shadow: 0 0 5px rgb(198, 199, 202);
+        color: rgb(98, 98, 247);
+        /* color: rgb(153, 4, 153); */
+        /* text-shadow: 0 0 5px rgb(198, 199, 202); */
     }
 
     .projects a:hover{
         text-shadow: 0 0 15px rgb(198, 199, 202);
+    }
+
+    .display-wrapper{
+        padding-top: 5%;
+        background-color:rgb(78, 72, 72);
+        border-radius: 50px;
+        width: 20%;
+        margin:auto;
+        margin-top: 50px;
+        margin-left: 100px;
+    }
+
+
+    footer {
+        background-color: transparent;
+        color: white;
+        width: 100%;
+        position: flex; /*proper way to position the footer at the very bottom*/
+        height: 2rem;
+        text-align: center;
+        margin: 0;
+        font-weight: bold;
     }
 
     /*this part of the code targets div, p, h1, ul, li, etc.*/
