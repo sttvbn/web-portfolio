@@ -49,10 +49,16 @@
             <p1> All projects are stored in Github. </p1> <a href = "https://github.com/sttvbn"> Click here</a>
         </div>
 
-        <div class = display-wrapper>
+        <div class = "display-wrapper">
             <div class = "display">
                 <h1>SymptoQuest</h1>
-                <a href = "https://sympto-quest-phi.vercel.app/"> Click Here</a>
+                <div class = "project-info">
+                    <p1>Description: Symptom checker web application using AI to help assist users.</p1>
+                    <p2>Technology: Google API, Chatgpt API, Realtime Firebase, and Sveltekit Framework</p2>
+                </div>
+                <div class = "display-link">
+                    <a href = "https://sympto-quest-phi.vercel.app/"> Click Here</a>
+                </div>
             </div>
         </div>
     </div>
@@ -267,13 +273,16 @@
     }
 
     .display-wrapper{
-        padding-top: 5%;
+        padding-bottom: 5%;
         background-color:rgb(78, 72, 72);
         border-radius: 50px;
         width: 20%;
-        margin:auto;
         margin-top: 50px;
         margin-left: 100px;
+    }
+
+    .display-link{
+        margin-top: 20%;
     }
 
 
