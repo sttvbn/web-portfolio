@@ -37,6 +37,14 @@
                     <img src = "src/routes/images/IMG_5644.jpg" alt = "self" class = "about-pic">
                     <h2> Hi there, I'm Steven Liu! </h2>
                     <p1>I'm a recent graduate from California State Univeristy of Fullerton (CSUF) with a bachelor's degree in Computer Science, and I'm focused on becoming a Software Engineer and Web developer, with a passion for working on both frontend and backend development.</p1>
+                    <p class = "Tech-skill">
+                        <strong>Skills: </strong>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                    </p>
                 </div>
             </div>
         </div>
@@ -51,13 +59,19 @@
 
         <div class = "display-wrapper">
             <div class = "display">
-                <h1>SymptoQuest</h1>
                 <div class = "project-info">
-                    <p1>Description: Symptom checker web application using AI to help assist users.</p1>
-                    <p2>Technology: Google API, Chatgpt API, Realtime Firebase, and Sveltekit Framework</p2>
+                    <h1>SymptoQuest</h1>
+                    <p class = "description">
+                        <strong>Description:</strong> Symptom checker web application using AI to help assist users.
+                    </p>
+                    <p class = "Tech">
+                        <strong>Technology:</strong> Google API, Chatgpt API, Realtime Firebase, and Sveltekit Framework (HTML, CSS, and JavaScript)
+                    </p>
                 </div>
                 <div class = "display-link">
-                    <a href = "https://sympto-quest-phi.vercel.app/"> Click Here</a>
+                    <!-- <p1>Repo: <a href = "https://github.com/sttvbn/SymptoQuest"> Click Here</a></p1> -->
+                    <a href = "https://github.com/sttvbn/SymptoQuest"> Click Here</a>
+                    <!-- <a href = "https://sympto-quest-phi.vercel.app/"> Click Here</a> -->
                 </div>
             </div>
         </div>
@@ -115,6 +129,7 @@
         margin: auto;
         height: 800px;
         margin-top: 50px;
+        border: 2px solid white;
     }
 
     .self-image{
@@ -201,13 +216,30 @@
     }
 
     .aboutme{
-        background-color: rgb(158, 154, 154);
-        width: 30%;   
+        /* background-color: rgb(158, 154, 154); */
+        background-color: rgb(78, 72, 72); 
+        width: 50%;   
         padding: 2rem; /*add padding around the content (this made the text stay in the middle and it looks nice)*/
-        border-radius: 25px;
+        border-radius: 50px;
         text-align: center;
         line-height: 1.6;
         color: black;
+        border: 2px solid white;
+    }
+
+    .Tech-skill{
+        overflow: hidden;
+        list-style-type: none;
+        display: flex;
+        gap: 50px;
+        padding-top: 20px;
+    }
+
+    .Tech-skill li{
+        background-color: rgb(155, 155, 167);
+        border-radius: 20px;
+        width: 20%;
+        border: 2px solid black;
     }
 
     .about-container{
@@ -217,10 +249,10 @@
 
     .about-pic{
         width: 500px;
-        height: auto;
+        height: 500px;
         border-radius: 50%;
-        margin-top: 2%;
-        margin-bottom: 2%;
+        object-fit: cover;
+        border: 2px solid #ccc;
     }
 
     .contact{
@@ -230,6 +262,10 @@
         padding-bottom: 10rem;
         padding-top: 20%;/*testing out spaces for the page*/
         color: white
+    }
+
+    .contact h1{
+        padding-bottom: 10px;
     }
 
     .links{
@@ -262,6 +298,10 @@
         color: white;
     }
 
+    .projects h1{
+        padding-bottom: 10px;
+    }
+
     .projects a{
         color: rgb(98, 98, 247);
         /* color: rgb(153, 4, 153); */
@@ -272,6 +312,15 @@
         text-shadow: 0 0 15px rgb(198, 199, 202);
     }
 
+    .project-info h1{
+        padding-top: 10px;
+    }
+
+    .description{
+        padding-bottom: 10px;
+    }
+
+
     .display-wrapper{
         padding-bottom: 5%;
         background-color:rgb(78, 72, 72);
@@ -279,10 +328,11 @@
         width: 20%;
         margin-top: 50px;
         margin-left: 100px;
+        border: 2px solid white;
     }
 
     .display-link{
-        margin-top: 20%;
+        margin-top: 10%;
     }
 
 
