@@ -65,7 +65,11 @@
                         <strong>Description:</strong> Symptom checker web application using AI to help assist users.
                     </p>
                     <p class = "Tech">
-                        <strong>Technology:</strong> Google API, Chatgpt API, Realtime Firebase, and Sveltekit Framework (HTML, CSS, and JavaScript)
+                        <strong>Technology:</strong>
+                        <li>Google API</li>
+                        <li>Chatgpt API</li>
+                        <li>Realtime Firebase</li>
+                        <li>Sveltekit Framework</li>
                     </p>
                 </div>
                 <div class = "display-link">
@@ -314,6 +318,21 @@
 
     .project-info h1{
         padding-top: 10px;
+    }
+
+    .Tech{
+        overflow: hidden;
+        list-style-type: none;
+        display: flex;
+        gap: 5px;
+        padding-top: 20px;
+    }
+
+    .Tech li{
+        background-color: rgb(155, 155, 167);
+        border-radius: 20px;
+        width: 30%;
+        border: 2px solid black;
     }
 
     .description{
