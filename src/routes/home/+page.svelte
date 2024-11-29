@@ -20,11 +20,11 @@
                 <h1> Steven Liu </h1>
                 <p1> |Software Engineer| |Web Developer|</p1>
                 <div class = "resume">
-                    <a class = "download" href = "src/routes/resume/Resume.pdf" download = "Resume.pdf"> Download Resume</a>
+                    <a class = "download" href = "src/resume/Resume.pdf" download = "Resume.pdf"> Download Resume</a>
                 </div>
             </div>
             <div class = "image">
-                <img src = "src/routes/images/self.jpg" alt="self" class = "self-image">
+                <img src = "src/images/self.jpg" alt="self" class = "self-image">
             </div>
         </div>
     </div>
@@ -34,7 +34,7 @@
             <h1> About Me </h1>
             <div class = "about-container">
                 <div class = "aboutme">
-                    <img src = "src/routes/images/IMG_5644.jpg" alt = "self" class = "about-pic">
+                    <img src = "src/images/IMG_5644.jpg" alt = "self" class = "about-pic">
                     <h2> Hi there, I'm Steven Liu! </h2>
                     <p1>I'm a recent graduate from California State Univeristy of Fullerton (CSUF) with a bachelor's degree in Computer Science, and I'm focused on becoming a Software Engineer and Web developer, with a passion for working on both frontend and backend development.</p1>
                     <p class = "Tech-skill">
@@ -87,9 +87,9 @@
             <p1>Email: stevenlaoliu@gmail.com</p1>
         </div>
         <div class = "links">
-            <a href = "https://github.com/sttvbn"><img src = "src/routes/images/github-black.png" alt = "git"></a>
-            <a href = "https://www.linkedin.com/in/steven-liu-4068b326a/"><img src = "src/routes/images/linkedin.png" alt = "linked"></a>
-            <a href = "https://www.instagram.com/stv.nliu/profilecard/?igsh=MzRlODBiNWFlZA%3D%3D"><img src = "src/routes/images/instagram.png" alt = "insta"></a>
+            <a href = "https://github.com/sttvbn"><img src = "src/images/github-black.png" alt = "git"></a>
+            <a href = "https://www.linkedin.com/in/steven-liu-4068b326a/"><img src = "src/images/linkedin.png" alt = "linked"></a>
+            <a href = "https://www.instagram.com/stv.nliu/profilecard/?igsh=MzRlODBiNWFlZA%3D%3D"><img src = "src/images/instagram.png" alt = "insta"></a>
         </div>
     </div>
 
@@ -331,7 +331,7 @@
     .Tech li{
         background-color: rgb(155, 155, 167);
         border-radius: 20px;
-        width: 30%;
+        width: 20%;
         border: 2px solid black;
     }
 
