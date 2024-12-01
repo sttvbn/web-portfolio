@@ -37,14 +37,14 @@
                     <img src = "images/IMG_5644.jpg" alt = "self" class = "about-pic">
                     <h2> Hi there, I'm Steven Liu! </h2>
                     <p1>I'm a recent graduate from California State Univeristy of Fullerton (CSUF) with a bachelor's degree in Computer Science, and I'm focused on becoming a Software Engineer and Web developer, with a passion for working on both frontend and backend development.</p1>
-                    <ul class = "Tech-skill">
+                    <div class = "Tech-skill">
                         <strong>Skills: </strong>
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>JavaScript</li>
                         <li>Python</li>
                         <li>C++</li>
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,13 +64,13 @@
                     <p class = "description">
                         <strong>Description:</strong> Symptom checker web application using AI to help assist users.
                     </p>
-                    <ul class = "Tech">
+                    <div class = "Tech">
                         <strong>Technology:</strong>
                         <li>Google API</li>
                         <li>Chatgpt API</li>
                         <li>Realtime Firebase</li>
                         <li>Sveltekit Framework</li>
-                    </ul>
+                    </div>
                 </div>
                 <div class = "display-link">
                     <!-- <p1>Repo: <a href = "https://github.com/sttvbn/SymptoQuest"> Click Here</a></p1> -->
