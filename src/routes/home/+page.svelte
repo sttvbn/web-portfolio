@@ -37,14 +37,14 @@
                     <img src = "images/IMG_5644.jpg" alt = "self" class = "about-pic">
                     <h2> Hi there, I'm Steven Liu! </h2>
                     <p1>I'm a recent graduate from California State Univeristy of Fullerton (CSUF) with a bachelor's degree in Computer Science, and I'm focused on becoming a Software Engineer and Web developer, with a passion for working on both frontend and backend development.</p1>
-                    <p class = "Tech-skill">
+                    <ul class = "Tech-skill">
                         <strong>Skills: </strong>
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>JavaScript</li>
                         <li>Python</li>
                         <li>C++</li>
-                    </p>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -64,13 +64,13 @@
                     <p class = "description">
                         <strong>Description:</strong> Symptom checker web application using AI to help assist users.
                     </p>
-                    <p class = "Tech">
+                    <ul class = "Tech">
                         <strong>Technology:</strong>
                         <li>Google API</li>
                         <li>Chatgpt API</li>
                         <li>Realtime Firebase</li>
                         <li>Sveltekit Framework</li>
-                    </p>
+                    </ul>
                 </div>
                 <div class = "display-link">
                     <!-- <p1>Repo: <a href = "https://github.com/sttvbn/SymptoQuest"> Click Here</a></p1> -->
@@ -318,6 +318,7 @@
 
     .project-info h1{
         padding-top: 10px;
+        color: black;
     }
 
     .Tech{
@@ -326,17 +327,15 @@
         display: flex;
         gap: 5px;
         padding-top: 20px;
+        font-size:small;
+        color: black;
     }
 
-    .Tech li{
-        background-color: rgb(155, 155, 167);
-        border-radius: 20px;
-        width: 20%;
-        border: 2px solid black;
-    }
 
     .description{
         padding-bottom: 10px;
+        font-size: small;
+        color: black;
     }
 
 
