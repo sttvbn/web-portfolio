@@ -5,7 +5,7 @@
                 <div class = "left-logo">
                     <h1><a href = "#about-me" > Steven Liu </a></h1>
                 </div>
-                <li><a href = "home"> Home </a></li>
+                <li><a href = "home-content"> Home </a></li>
                 <li><a href = "#about-me"> About </a></li>
                 <li><a href = "#myprojects"> Projects </a></li>
                 <li><a href = "#contact-me"> Contact </a></li>
@@ -22,9 +22,9 @@
                 <div class = "resume">
                     <a class = "download" href = "src/routes/resume/Resume.pdf" download = "Resume.pdf"> Download Resume</a>
                 </div>
-            </div>
-            <div class = "image">
-                <img src = "images/self.jpg" alt="self" class = "self-image">
+                <div class = "image">
+                    <img src = "images/self.jpg" alt="self" class = "self-image">
+                </div>
             </div>
         </div>
     </div>
@@ -73,9 +73,7 @@
                     </div>
                 </div>
                 <div class = "display-link">
-                    <!-- <p1>Repo: <a href = "https://github.com/sttvbn/SymptoQuest"> Click Here</a></p1> -->
                     <a href = "https://github.com/sttvbn/SymptoQuest"> Click Here</a>
-                    <!-- <a href = "https://sympto-quest-phi.vercel.app/"> Click Here</a> -->
                 </div>
             </div>
         </div>
@@ -94,7 +92,7 @@
     </div>
 
     <footer>
-        <p1>Copy Right 2024</p1>
+        <p1>Developed by Steven Liu 2025</p1>
     </footer>
 </body>
 
@@ -118,10 +116,10 @@
     }
 
     .main-content{
-        position: absolute;
-        /* margin-top: 80px; */
-        bottom: 50%;
-        left: 30%;
+        flex: 1;
+        min-width: 300px;
+        text-align: left;
+        word-break: break-word;
     }
 
     .content {
@@ -131,22 +129,25 @@
         border-radius: 50px;
         width: 50%;
         margin: auto;
-        height: 800px;
+        height: auto;
         margin-top: 50px;
         border: 2px solid white;
+
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        gap: 20px;
     }
 
     .self-image{
-        position: absolute;
-        width: auto;
-        height: 500px;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
         border-radius: 50px;
-        right: 30%;
-        bottom: 30%;
         object-fit: cover;
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
+        flex: 1;
     }
 
     .nav { 
@@ -229,13 +230,18 @@
         line-height: 1.6;
         color: black;
         border: 2px solid white;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .Tech-skill{
-        overflow: hidden;
         list-style-type: none;
+        flex-wrap: wrap;
+        justify-content: center;
         display: flex;
-        gap: 50px;
+        gap: 20px;
         padding-top: 20px;
     }
 
@@ -243,7 +249,12 @@
         background-color: rgb(155, 155, 167);
         border-radius: 20px;
         width: 20%;
+        text-align: center;
+        min-width: 120px;
+        flex: 1;
+        max-width: 120px;
         border: 2px solid black;
+        word-break: break-word;
     }
 
     .about-container{
@@ -252,8 +263,9 @@
     }
 
     .about-pic{
-        width: 500px;
-        height: 500px;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
         border-radius: 50%;
         object-fit: cover;
         border: 2px solid #ccc;
@@ -331,6 +343,11 @@
         color: black;
     }
 
+    .Tech li{
+        background-color: grey;
+        border-radius: 50px;
+    }
+
 
     .description{
         padding-bottom: 10px;
@@ -343,10 +360,13 @@
         padding-bottom: 5%;
         background-color:rgb(78, 72, 72);
         border-radius: 50px;
-        width: 20%;
+        width: 50%;
+        max-width: 500px;
+        height: auto;
         margin-top: 50px;
         margin-left: 100px;
         border: 2px solid white;
+        word-break: break-word;
     }
 
     .display-link{
