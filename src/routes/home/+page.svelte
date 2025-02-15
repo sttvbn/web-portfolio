@@ -76,7 +76,9 @@
                     </div>
                 </div>
                 <div class = "display-link">
-                    <a href = "https://github.com/sttvbn/SymptoQuest"> Click Here</a>
+                    <li><p1>Github Repo: </p1><a href = "https://github.com/sttvbn/SymptoQuest"> Click Here</a></li>
+                    <li><p1>Want to check it out? </p1><a href = "https://sympto-quest-phi.vercel.app/" > Click Here</a></li>
+                    
                 </div>
             </div>
         </div>
@@ -395,7 +397,13 @@
 
     .display-link{
         margin-top: 10%;
+        display:flex;
+        gap: 20px;
+        align-items: center;
+        list-style-type: none;
+        flex-direction: column;
     }
+
 
 
     footer {
