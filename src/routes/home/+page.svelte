@@ -21,7 +21,7 @@
                     <h1> Steven Liu </h1>
                     <p1> |Software Engineer| |Web Developer|</p1>
                     <div class = "resume">
-                        <a class = "download" href = "src/routes/resume/Resume.pdf" download = "Resume.pdf"> Download Resume</a>
+                        <a class = "download" href = "src/routes/Resume.pdf" download = "Resume.pdf"> Download Resume</a>
                     </div>
                 </div>
                 <img src = "images/self.jpg" alt="self" class = "self-image">
