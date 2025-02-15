@@ -16,15 +16,15 @@
     <div class = "content">
         <div id = "home-content">
             <div class = "main-content">
-                <h1> Welcome to my Portfolio!  </h1>
-                <h1> Steven Liu </h1>
-                <p1> |Software Engineer| |Web Developer|</p1>
-                <div class = "resume">
-                    <a class = "download" href = "src/routes/resume/Resume.pdf" download = "Resume.pdf"> Download Resume</a>
+                <div class = "text-container">
+                    <h1> Welcome to my Portfolio!  </h1>
+                    <h1> Steven Liu </h1>
+                    <p1> |Software Engineer| |Web Developer|</p1>
+                    <div class = "resume">
+                        <a class = "download" href = "src/routes/resume/Resume.pdf" download = "Resume.pdf"> Download Resume</a>
+                    </div>
                 </div>
-                <div class = "image">
-                    <img src = "images/self.jpg" alt="self" class = "self-image">
-                </div>
+                <img src = "images/self.jpg" alt="self" class = "self-image">
             </div>
         </div>
     </div>
@@ -64,10 +64,13 @@
                     <p class = "description">
                         <strong>Description:</strong> Symptom checker web application using AI to help assist users.
                     </p>
+
+                    <div class = "tech-title">
+                        <p1>Technology:</p1>
+                    </div>
                     <div class = "Tech">
-                        <strong>Technology:</strong>
                         <li>Google API</li>
-                        <li>Chatgpt API</li>
+                        <li>OpenAI API</li>
                         <li>Realtime Firebase</li>
                         <li>Sveltekit Framework</li>
                     </div>
@@ -116,10 +119,13 @@
     }
 
     .main-content{
-        flex: 1;
-        min-width: 300px;
-        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
         word-break: break-word;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     .content {
@@ -128,26 +134,32 @@
         background-color: rgb(78, 72, 72);
         border-radius: 50px;
         width: 50%;
+        height: 50%;
         margin: auto;
-        height: auto;
         margin-top: 50px;
         border: 2px solid white;
 
 
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        padding: 2rem;
+        padding: 5rem;
         gap: 20px;
     }
 
+    .text-container{
+        flex: 2; 
+        text-align: left;
+    }
+
     .self-image{
+        display: flex; 
+        justify-content: right;
         width: 100%;
-        max-width: 300px;
+        max-width: 350px;
         height: auto;
         border-radius: 50px;
         object-fit: cover;
-        flex: 1;
     }
 
     .nav { 
@@ -329,29 +341,40 @@
     }
 
     .project-info h1{
-        padding-top: 10px;
         color: black;
     }
 
-    .Tech{
-        overflow: hidden;
-        list-style-type: none;
-        display: flex;
-        gap: 5px;
-        padding-top: 20px;
-        font-size:small;
+    .tech-title{
+        font-size:medium;
         color: black;
+        padding-top: 20px;
+    }
+
+    .Tech{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding-top: 20px;
+        font-size:medium;
+        color: black;
+        list-style-type: none;
+        overflow: hidden;
     }
 
     .Tech li{
         background-color: grey;
         border-radius: 50px;
+        min-width: 120px;
+        text-align: center;
+        word-break: break-word;
+        max-width: 120px;
+        width: 20%;
     }
 
 
     .description{
         padding-bottom: 10px;
-        font-size: small;
+        font-size: medium;
         color: black;
     }
 
@@ -361,12 +384,13 @@
         background-color:rgb(78, 72, 72);
         border-radius: 50px;
         width: 50%;
-        max-width: 500px;
+        max-width: 700px;
         height: auto;
         margin-top: 50px;
         margin-left: 100px;
-        border: 2px solid white;
+        border: 3px solid white;
         word-break: break-word;
+        padding: 5rem;
     }
 
     .display-link{
