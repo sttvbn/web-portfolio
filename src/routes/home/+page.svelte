@@ -60,19 +60,21 @@
         <div class = "display-wrapper">
             <div class = "display">
                 <div class = "project-info">
-                    <h1>SymptoQuest</h1>
-                    <p class = "description">
+                    <div class = "logo">
+                        <h1 class = "text1">Sympto</h1><h1 class = "text2">Quest</h1>
+                    </div>
+                    <div class = "description">
                         <strong>Description:</strong> Symptom checker web application using AI to help assist users.
-                    </p>
+                    </div>
 
                     <div class = "tech-title">
                         <p1>Technology:</p1>
                     </div>
                     <div class = "Tech">
                         <li>Google API</li>
-                        <li>OpenAI API</li>
-                        <li>Realtime Firebase</li>
-                        <li>Sveltekit Framework</li>
+                        <li>Chatgpt API</li>
+                        <li>Firebase API</li>
+                        <li>Sveltekit</li>
                     </div>
                 </div>
                 <div class = "display-link">
@@ -334,16 +336,10 @@
 
     .projects a{
         color: rgb(98, 98, 247);
-        /* color: rgb(153, 4, 153); */
-        /* text-shadow: 0 0 5px rgb(198, 199, 202); */
     }
 
     .projects a:hover{
         text-shadow: 0 0 15px rgb(198, 199, 202);
-    }
-
-    .project-info h1{
-        color: black;
     }
 
     .tech-title{
@@ -388,10 +384,11 @@
         width: 50%;
         max-width: 700px;
         height: auto;
-        margin-top: 50px;
-        margin-left: 100px;
+        /* margin-top: 50px;
+        margin-left: 100px; */
         border: 3px solid white;
         word-break: break-word;
+        margin: 50px auto; 
         padding: 5rem;
     }
 
@@ -404,6 +401,25 @@
         flex-direction: column;
     }
 
+    .logo{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+    }
+
+    .text1{
+        color: rgb(4, 163, 4);
+        margin: 0; 
+        padding: 0;
+    }
+
+    .text2{
+        color: rgb(41, 40, 40);
+        margin: 0; 
+        padding: 0;
+    }
 
 
     footer {
