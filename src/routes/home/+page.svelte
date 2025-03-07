@@ -159,11 +159,11 @@
         <div class = "form-container">
 
             <form on:submit={handleSubmit} class = "info">
-                <label>Name</label>
+                <label for >Name</label>
                 <input type = "text" class = "name-input" placeholder = "Type here" bind:value={name} required/>
-                <label>Email</label>
+                <label for >Email</label>
                 <input type = "email" class = "email-input" placeholder = "Type here" bind:value={email} required/>
-                <label>Message</label>
+                <label for >Message</label>
                 <textarea placeholder = "Message" class = "text-area" bind:value={message} required></textarea>
 
                 <button type = "submit" class = "submit-button">Send Message</button>
