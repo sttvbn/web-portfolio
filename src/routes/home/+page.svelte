@@ -1,3 +1,58 @@
+<script>
+    let name = ''; 
+    let email = '';
+    let message = '';
+    let success = '';
+    let error = '';
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        if (!name || !email || !message) {
+            error = 'Please fill in all required fields before submmiting.';
+            messagereset();
+            return;
+        }
+
+        try{
+            const res = await fetch("/home", {
+                method: 'POST', 
+                headers: { 'content-Type': 'application/json'},
+                body: JSON.stringify({ name, email, message}),
+            });
+
+            // if (!name || !email || !message) {
+            // error = 'Please fill in all required fields before submmiting.';
+            // messagereset();
+            // return;
+            // }
+
+            // const data = await res.json();
+            if(res.ok){
+                success = 'Successfully Submitted. Thank you for your time.';
+                error = '';
+                name = '';
+                email = '';
+                message = '';
+                messagereset();
+            } else {
+                error = 'Something went wrong. Please try again.'
+            }
+        } catch (err) {
+            error = 'Something went wrong. Please try again.';
+            success = '';
+        }
+    };
+
+
+    function messagereset(){
+        setTimeout(() => {
+            error = ''; 
+            success = ''; 
+        }, 5000);
+    }
+</script>
+
 <body>
     <div class = "wrapper">
         <div class = "nav">
@@ -5,7 +60,7 @@
                 <div class = "left-logo">
                     <h1><a href = "#about-me" > Steven Liu </a></h1>
                 </div>
-                <li><a href = "home-content"> Home </a></li>
+                <!-- <li><a href = "home-content"> Home </a></li> -->
                 <li><a href = "#about-me"> About </a></li>
                 <li><a href = "#myprojects"> Projects </a></li>
                 <li><a href = "#contact-me"> Contact </a></li>
@@ -98,6 +153,33 @@
         </div>
     </div>
 
+
+    <div class = "form">
+        <h1>Want to Connect? Submit a form.</h1>
+        <div class = "form-container">
+
+            <form on:submit={handleSubmit} class = "info">
+                <label>Name</label>
+                <input type = "text" class = "name-input" placeholder = "Type here" bind:value={name} required/>
+                <label>Email</label>
+                <input type = "email" class = "email-input" placeholder = "Type here" bind:value={email} required/>
+                <label>Message</label>
+                <textarea placeholder = "Message" class = "text-area" bind:value={message} required></textarea>
+
+                <button type = "submit" class = "submit-button">Send Message</button>
+
+
+                {#if success}
+                    <p class = "success">{success}</p>
+                {/if}
+                {#if error}
+                    <p class = "error">{error}</p>
+                {/if}
+            </form>
+
+        </div>
+    </div>
+
     <footer>
         <p1>Developed by Steven Liu 2025</p1>
     </footer>
@@ -105,6 +187,111 @@
 
 
 <style>
+
+    .error{
+        color: red;
+        font-size: 18px; 
+        font-weight: bold;
+        flex-wrap: wrap;
+        word-break: break-word;
+    }
+
+    .success {
+        color: rgb(22, 105, 22); 
+        font-size: 18px; 
+        font-weight: bold;
+        flex-wrap: wrap;
+        word-break: break-word;
+    }
+    .form h1{
+        text-align: center;
+        color: white;
+    }
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        gap: 20px;
+    }
+
+    .form-container{
+        background: grey;
+        width: 45%;
+        flex-wrap: wrap;
+        border-radius: 20px;
+        word-break: break-word;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 45%;
+        height: 50%;
+        border: 3px solid white;
+        overflow: auto;
+    }
+
+    .info{
+        flex-direction: column;
+        display: flex;
+        text-align: left;
+        align-items: flex-start;
+        gap: 10px;
+        width: 80%;
+        box-sizing: border-box;
+    }
+
+    .name-input{
+        border-radius: 10px;
+        margin: 5px; 
+        width: 100%;
+        padding: 14px 20px;
+        word-break: break-word;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: medium;
+        border: 3px solid black;
+        /* box-sizing: border-box;
+        resize: vertical; */
+    }
+    .email-input{
+        border-radius: 10px;
+        margin: 5px; 
+        width: 100%;
+        padding: 14px 20px;
+        word-break: break-word;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: medium;
+        border: 3px solid black;
+    }
+
+    .text-area{
+        border-radius: 10px;
+        width: 100%;
+        margin: 5px;
+        height: 20vh;
+        padding: 14px 20px;
+        word-break: break-word;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: medium;
+        border: 3px solid black;
+    }
+
+    .submit-button{
+        border-radius: 10px;
+        padding: 14px 20px;
+        width: 50%;
+        word-break: break-word;
+        align-self: flex-end;
+        width: fit-content;
+    }
+
+    .submit-button:hover{
+        background-color: rgb(98, 98, 247);
+        box-shadow: 0 0 15px 5px rgb(226, 226, 226);
+        transform: scale(1.05);
+    }
+
     ul {
         overflow: hidden;
         list-style-type: none; /*not make the buttons into a list*/
@@ -114,6 +301,7 @@
         justify-content: flex-end; /*this will align buttons/items to the right side*/
         text-transform: uppercase;
         font-weight: bold;
+        gap: 50px;
     }
 
     /*using the global function to fix background color*/
@@ -127,9 +315,9 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        word-break: break-word;
+        /* word-break: break-word; */
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 40px;
     }
 
     .content {
@@ -142,13 +330,10 @@
         margin: auto;
         margin-top: 50px;
         border: 2px solid white;
-
-
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 5rem;
-        gap: 20px;
     }
 
     .text-container{
@@ -223,7 +408,7 @@
 
     .resume a:hover{
         border-radius: 20px;
-        background-color: grey;
+        background-color: rgb(98, 98, 247);
         height: 50px;
         box-shadow: 0 0 15px 5px rgb(226, 226, 226);
         transform: scale(1.05);
@@ -232,7 +417,7 @@
     .about{
         text-align: center;
         font-weight: bold; 
-        padding-top: 20%;/*testing out spaces for the page*/
+        padding-top: 20%;
         color: white;
     }
 
@@ -250,6 +435,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
     .Tech-skill{
@@ -292,8 +478,8 @@
         font-weight: bold; 
         text-transform: uppercase;
         padding-bottom: 10rem;
-        padding-top: 20%;/*testing out spaces for the page*/
-        color: white
+        padding-top: 30%;
+        color: white;
     }
 
     .contact h1{
@@ -384,8 +570,6 @@
         width: 50%;
         max-width: 700px;
         height: auto;
-        /* margin-top: 50px;
-        margin-left: 100px; */
         border: 3px solid white;
         word-break: break-word;
         margin: 50px auto; 
