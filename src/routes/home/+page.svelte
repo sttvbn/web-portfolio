@@ -90,7 +90,7 @@
             <div class = "about-container">
                 <div class = "aboutme">
                     <img src = "images/IMG_5644.jpg" alt = "self" class = "about-pic">
-                    <h2> Hi there, I'm Steven Liu! </h2>
+                    <h2> Hi there, I'm Steven! </h2>
                     <p1>I'm a recent graduate from California State Univeristy of Fullerton (CSUF) with a bachelor's degree in Computer Science, and I'm focused on becoming a Software Engineer and Web developer, with a passion for working on both frontend and backend development.</p1>
                     <div class = "Tech-skill">
                         <strong>Skills: </strong>
@@ -129,7 +129,10 @@
                         <li>Google API</li>
                         <li>Chatgpt API</li>
                         <li>Firebase API</li>
-                        <li>Sveltekit</li>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>Javascript</li>
+                        <li>Node.Js</li>
                     </div>
                 </div>
                 <div class = "display-link">
@@ -181,7 +184,7 @@
     </div>
 
     <footer>
-        <p1>Developed by Steven Liu 2025</p1>
+        <p1>Developed by Steven 2025</p1>
     </footer>
 </body>
 
@@ -457,6 +460,7 @@
         max-width: 120px;
         border: 2px solid black;
         word-break: break-word;
+        text-transform: uppercase;
     }
 
     .about-container{
@@ -615,6 +619,7 @@
         text-align: center;
         margin: 0;
         font-weight: bold;
+        /* font-family: cursive; */
     }
 
     /*this part of the code targets div, p, h1, ul, li, etc.*/
