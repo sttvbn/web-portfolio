@@ -230,7 +230,7 @@
         align-items: center;
         display: flex;
         width: 45%;
-        height: 50%;
+        height: 70%;
         border: 3px solid white;
         overflow: auto;
     }
